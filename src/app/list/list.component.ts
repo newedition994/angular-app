@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+// tslint:disable-next-line: quotemark
+import { Component, OnInit } from "@angular/core";
+// tslint:disable-next-line: quotemark
+import { HttpService } from "../http.service";
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  // tslint:disable-next-line: quotemark
+  selector: "app-list",
+  // tslint:disable-next-line: quotemark
+  templateUrl: "./list.component.html",
+  // tslint:disable-next-line: quotemark
+  styleUrls: ["./list.component.scss"]
 })
 export class ListComponent implements OnInit {
-
-  constructor() { }
+  // tslint:disable-next-line: variable-name
+  constructor(private _http: HttpService) {}
 
   ngOnInit() {
+    this._http.myMethod();
   }
-
 }
