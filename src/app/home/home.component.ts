@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   setClasses() {
+    // tslint:disable-next-line: prefer-const
     let myClasses = {
       active: this.clickCounter > 4,
       notactive: this.clickCounter <= 4
