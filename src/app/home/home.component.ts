@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+// tslint:disable-next-line: quotemark
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  // tslint:disable-next-line: quotemark
+  selector: "app-home",
+  // tslint:disable-next-line: quotemark
+  templateUrl: "./home.component.html",
+  // tslint:disable-next-line: quotemark
+  styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
+  // tslint:disable-next-line: no-inferrable-types
+  clickCounter: number = 0;
+  // tslint:disable-next-line: no-inferrable-types
+  name: string = "";
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  countClick() {
+    this.clickCounter += 1;
   }
-
 }
