@@ -13,10 +13,12 @@ import { HomeComponent } from "./home/home.component";
 import { ListComponent } from "./list/list.component";
 // tslint:disable-next-line: quotemark
 import { FormsModule } from "@angular/forms";
+// tslint:disable-next-line: quotemark
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ListComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

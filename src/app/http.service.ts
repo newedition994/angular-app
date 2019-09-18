@@ -1,15 +1,17 @@
 // tslint:disable-next-line: quotemark
 import { Injectable } from "@angular/core";
+// tslint:disable-next-line: quotemark
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   // tslint:disable-next-line: quotemark
   providedIn: "root"
 })
 export class HttpService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
-  myMethod() {
+  getBeer() {
     // tslint:disable-next-line: quotemark
-    console.log("hey, whats up!");
+    return this.http.get("https://api.openbrewerydb.org/breweries");
   }
 }
